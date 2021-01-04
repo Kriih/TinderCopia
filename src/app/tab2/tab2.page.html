@@ -1,0 +1,75 @@
+<ion-content class="fondologin" ion-color='primary'>
+
+
+
+
+
+  <ion-toolbar>
+    <ion-title>
+      Perfil
+    </ion-title>
+  </ion-toolbar>
+  
+  <div class = 'container2'>
+    <ion-button class='button button-large' (click)='holasoyunafuncion()' fill='clear'>
+      <div class='margen'>
+        <h1 class='weass'>{{likes}}</h1>
+        
+      <ion-icon size='large' name="heart"></ion-icon>   
+    </div>
+    </ion-button>
+    
+    <img shape='rounded' class='border' src='https://cdn.discordapp.com/attachments/771171346625462284/786816366707343390/asjkdhasjk.png'/>
+    
+    <ion-button class='button button-large' [routerLink]="['/tabs/tab5']" fill='clear'>
+      <ion-icon name="settings-outline"></ion-icon></ion-button>
+    </div>
+  <div class= 'container'>
+    <h1>Benja</h1>
+    <h1>21 años</h1>
+  
+    <h2>Estudiante de ingeniería comercial</h2>
+    <h2>Estudiante de ingeniería comercial</h2>
+    
+  </div>
+
+  
+
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+    <ion-fab-button [routerLink]="['/tabs/tab4']">
+    
+      <ion-icon name="camera"></ion-icon>
+
+    </ion-fab-button>
+  </ion-fab>
+
+
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-header collapse="condense">
+      <ion-toolbar>
+        <ion-title size="large">Photo Gallery</ion-title>
+      </ion-toolbar>
+    </ion-header>
+  
+    <ion-grid>
+      <ion-row>
+      <ion-col size="6" *ngFor="let photo of photoService.photos; index as position">
+        <ion-img [src]="photo.webviewPath" (click)="showActionSheet(photo, position)"></ion-img>
+      </ion-col>
+      </ion-row>
+    </ion-grid>
+  
+    <ion-fab vertical="bottom" horizontal="center" slot='fixed'>
+      <ion-fab-button class='sase' (click)="photoService.addNewToGallery()">
+        <ion-icon name="camera"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+    
+

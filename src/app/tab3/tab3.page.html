@@ -1,0 +1,34 @@
+<ion-toolbar>
+  <ion-title>
+    Haz nuevas amistades
+  </ion-title>
+</ion-toolbar>
+
+
+<ion-content>
+
+  <ion-slides pager='false'>
+    <ion-slide *ngFor='let slide of slides'>
+      <div class='imagen' >
+        <img style="width: 360px; height: 360px;" [src]='slide.img'>
+      </div>
+      <div>
+        <h3>
+          {{ slide.titulo }}
+          {{ slide.edad }}
+          
+          
+        </h3>
+        <h3>{{ slide.carrera }}</h3>
+
+
+        <ion-button class='button button-large' [routerLink]="['/tabs/tab6']" fill='clear'>
+          <ion-icon class='size' name="heart"></ion-icon></ion-button>
+        
+      </div>
+    </ion-slide>
+  </ion-slides>
+
+</ion-content>
+
+

@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "tinderlogin-448f1": {
+      "hosting": {
+        "app": [
+          "tinderlogin-448f1"
+        ]
+      }
+    }
+  }
+}
